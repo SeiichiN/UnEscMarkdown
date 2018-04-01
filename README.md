@@ -3,11 +3,11 @@ unEscape Markdown
 
 ## 作った動機
 
-Webの中の一つの文章をMarkdownでMarkdownで記述すると表現力がアップしてわかりやすくなるが、
+Webの中の一つの文章をMarkdownで記述すると表現力がアップしてわかりやすくなるが、
 Javascriptなどのスクリプトが動くのが困る。
 
-Webの中の文章は、htmlspecialchars関数でスクリプトを無効化するが、Markdownで記述した
-文章をhtmlspecialchars関数を通すと、コードを表示する部分が無効化される。
+Webの中の文章は、出力時にhtmlspecialchars関数で処理するが、Markdownで記述した
+文章をhtmlspecialchars関数に通すと、コードを表示する部分が無効化される。
 
 たとえば、以下のような記述では、
 
@@ -20,7 +20,7 @@ Webの中の文章は、htmlspecialchars関数でスクリプトを無効化す�
 このようになる。  
 ![Sample1](sample1.png)
 
-だから、コードの中だけ、htmlspecialchars関数での処理を元に戻せばいい。
+で、コードの中だけ、htmlspecialchars関数での処理を元に戻そうと考えた。
 
 ついでに、引用を示す部分も処理を元に戻す。
 
