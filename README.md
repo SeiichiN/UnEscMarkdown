@@ -42,7 +42,7 @@ use Michelf\MarkdownExtra;
 さきほどのMarkdownExtra記法の文は、
 これが $text に入っているとして、以下のようにする。
 
-```
+```PHP
 $newtext = unEscMark(htmlspecialchars($text, ENT_QUOTE, "UTF-8"));
 $html = MarkdownExtra::defaultTransform($newtext);
 
